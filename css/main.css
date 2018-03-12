@@ -1,0 +1,47 @@
+html, body {
+  margin: 15px;
+}
+#map {
+  height: 450px;
+  width: 65%;
+  display: inline-block;
+}
+
+#type-list {
+  margin-left: 2%;
+  width: 30%;
+  display: inline-block;
+}
+
+#types {
+  height: 450px;
+  overflow: scroll;
+}
+
+#place-list {
+  width: 100%;
+}
+
+#place-search {
+  width: 300px;
+}
+
+#show-places-input {
+  height: 200px; 
+  overflow: scroll; 
+  margin-bottom: 15px; 
+  display: none;
+}
+
+.btn {
+  margin-left: 15px;
+  font-size: 28px;
+}
+
+input[type=text] {
+  margin-right: 40px;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
