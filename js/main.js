@@ -81,7 +81,8 @@ function SearchNearby() {
         marker.distance = google.maps.geometry.spherical.computeDistanceBetween(originMarker.position, place.geometry.location)
         CreateInfoWindow(marker, place)
         markers.push(marker)
-        $('#places').append('<li class="m-b-15" id="' + place.id + '">' + place.name + '<br>ระยะห่าง: ' + marker.distance + ' เมตร<br>ประเภท: [' + place.types + ']</li>')
+        var link = '<a href="https://maps.googleapis.com/maps/api/distancematrix/json?origins=' + map.center.lat() + ',' + map.center.lng() + '&destinations=place_id:' + place.place_id + '&mode=walking&language=th-TH&key=AIzaSyCXiuF8W3VBu0YBVW--1iPcUpnEYwLOZV8" target="_blank">walking</a>'
+        $('#places').append('<li class="m-b-15" id="' + place.id + '">' + place.name + '<br>ระยะห่าง: ' + marker.distance + ' เมตร<br>ระยะทางและเวลาการเดิน:' + link + '<br>ประเภท: [' + place.types + ']</li>')
       })
     }
   })
